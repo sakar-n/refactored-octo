@@ -1,3 +1,6 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
 {% if request.user.is_authenticated %}
 
 <p>{{request.user}}</p>
@@ -7,7 +10,7 @@
 <a href="{% url 'login' %}">login</a>
 {% endif %}
 <hr>
-<h1> my to do list
+<h1> My to do list
 
 </h1>
 <a href="{% url 'task-create' %}">Add Task</a>
@@ -32,3 +35,4 @@
     <h3>no items in list </h3>
     {% endfor %}
 </table>
+{% endblock content %}
