@@ -1,9 +1,30 @@
+<!DOCTYPE html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 <h1>login</h1>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+
+        <!-- Login Form -->
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="login">
+        </form>
+
+        <!-- Remind Passowrd -->
 
 
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="login">
-</form>
-<P>don't have account ?<a href="{% url 'register' %}">Register </a></P>
+    </div>
+</div>
+
+
+
+
+
+<P>Don't have account ?<a href="{% url 'register' %}">Register </a></P>
